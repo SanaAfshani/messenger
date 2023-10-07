@@ -37,7 +37,7 @@ export interface Chat {
 
 export interface User {
     id: string;
-    chatId: string;
+    chatId?: string;
     name: string;
     picture: string;
 }
