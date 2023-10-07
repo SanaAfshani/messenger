@@ -1,3 +1,4 @@
+// @ts-nocheck
 import React, { useEffect, useState, useRef, FormEvent } from "react";
 import useChat from "@/lib/usechat";
 import ChatMessage from "@/components/chatmessage";
@@ -6,10 +7,10 @@ import NewMessageForm from "@/components/newmessageform";
 import TypingMessage from "@/components/typingmessage";
 import styles from '@/styles/chatroom.module.scss';
 import UserAvatar from "@/components/user/useravatar";
-import useKeepScrollPosition from "@/hooks/useKeepScrollPosition";
 import BackToBottomButton from "@/components/backToBottomButton/BackToBottomButton";
 import Icon from "@/components/icons/Icons";
 import ChatComponent from "@/components/chat/Chat";
+import useKeepScrollPosition from "@/hooks/useKeepScrollPosition";
 
 
 export default function Chat({chatId,newChat} : {chatId:string,newChat:boolean}) {

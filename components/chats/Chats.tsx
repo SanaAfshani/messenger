@@ -6,8 +6,8 @@ import Icon from "@/components/icons/Icons";
 
 interface ChatListProps {
     chats: Chat[];
-    setChatId: ()=>void;
-    setNewChat: ()=>void;
+    setChatId: (id:string)=>void;
+    setNewChat: (status:boolean)=>void;
 }
 
 const ChatList: React.FC<ChatListProps> = ({ chats,setChatId, setNewChat }) => {
@@ -18,8 +18,10 @@ const ChatList: React.FC<ChatListProps> = ({ chats,setChatId, setNewChat }) => {
                     <ChatListItem key={chat.id} chat={chat} setChatId={setChatId} />
                 ))}
             </div>
-            <button className={styles['new-chat']} onClick={()=>{setNewChat(true)
-                setChatId('2')}}>
+            <button className={styles['new-chat']} onClick={()=> {
+                setNewChat(true)
+                setChatId('2')
+            }}>
                 <Icon type='plus' className='text-white text-24' />
             </button>
         </>

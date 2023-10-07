@@ -1,7 +1,7 @@
-import { useRef, useLayoutEffect, useMemo } from "react";
+import {useRef, useLayoutEffect, useMemo, DependencyList} from "react";
 
-const useKeepScrollPosition = (deps = []) => {
-  const containerRef = useRef(null);
+const useKeepScrollPosition = (deps:DependencyList = []) => {
+  const containerRef = useRef<HTMLDivElement>(null);
   const previousScrollPosition = useRef(0);
 
   useMemo(() => {
@@ -10,7 +10,7 @@ const useKeepScrollPosition = (deps = []) => {
       previousScrollPosition.current =
         container?.scrollHeight - container?.scrollTop;
     }
-  }, [...deps]);
+  }, [deps]);
 
   useLayoutEffect(() => {
     if (containerRef?.current) {
@@ -18,7 +18,7 @@ const useKeepScrollPosition = (deps = []) => {
       container.scrollTop =
         container?.scrollHeight - previousScrollPosition.current;
     }
-  }, [...deps]);
+  }, [deps]);
 
   return {
     containerRef

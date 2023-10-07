@@ -17,11 +17,13 @@ export interface MessageData {
 export interface Message {
     id: string;
     chatId: string;
+    message:string;
     body: string;
     senderId: string;
     user: UserData;
     sentAt: number;
     ownedByCurrentUser?: boolean;
+    in: boolean
 }
 
 export interface Chat {
@@ -31,4 +33,11 @@ export interface Chat {
         image: string;
     };
     latestMessage: string;
+}
+
+export interface User {
+    id: string;
+    chatId: string;
+    name: string;
+    picture: string;
 }

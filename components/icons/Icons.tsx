@@ -1,5 +1,5 @@
 // components/Icon.tsx
-import React, { ReactElement, cloneElement } from 'react';
+import React, {ReactElement, cloneElement, CSSProperties} from 'react';
 import PropTypes from 'prop-types';
 /**
  * An Icon set.
@@ -34,7 +34,7 @@ const IconWrapper: Record<string, ReactElement> = {
 const Icon: React.FC<IconProps> = ({ type, className, style }) => {
     const result = IconWrapper[type];
 
-    let finalProps = { ...style };
+    let finalProps = { ...style } as (CSSProperties & {className:string} );
     if (className) {
         finalProps = {
             ...finalProps,

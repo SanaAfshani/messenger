@@ -2,7 +2,7 @@ import styles from '@/styles/chatmessage.module.scss';
 import { Message } from '@/lib/types';
 
 const ChatMessage = ({ message }: {message: Message}) => {
-    const sentDate = new Date(message.sentAt);
+    const sentDate = new Date();
     const hour = sentDate.getHours();
     const minute = sentDate.getMinutes();
     const formattedTime = `${hour?.toString().padStart(2, '0')}:${minute

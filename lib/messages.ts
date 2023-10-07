@@ -5,7 +5,7 @@ const messages: Message[] = [];
 
 export const addMessage = (chatId: string, message: MessageData) => {
   const msg = { id: uuidv4(), chatId, ...message, sentAt: Date.now() };
-  messages.push(msg);
+  messages.push(<Message>msg);
   return msg;
 };
 
