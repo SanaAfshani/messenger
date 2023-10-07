@@ -1,0 +1,47 @@
+@import "styles/variables";
+.chat-list-item {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+
+  .user-image {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+
+  .user-info {
+    flex-grow: 1;
+
+    .user-name {
+      font-weight: 500;
+      font-size: 16px;
+      color: rgba(25, 25, 25, 0.95);
+    }
+
+    .latest-message {
+      color: rgba(25, 25, 25, 0.6);
+      font-size: 12px;
+      margin-top: 6px;
+      margin-bottom: 0px;
+    }
+  }
+}
+
+.chat-list {
+  width: 300px;
+  overflow-y: auto;
+}
+
+.new-chat{
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: $primary;
+  border: none;
+  position: absolute;
+  bottom: 70px;
+  right: 20px;
+  box-shadow: 0px 1px 20px 0px rgba(0, 0, 0, 0.15);
+}

@@ -1,0 +1,36 @@
+.chat {
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  padding-bottom: 40px;
+  padding: 16px;
+}
+
+.message {
+  margin: 5px 0;
+  max-width: 50%;
+  border-radius: 20px;
+  display: inline-flex;
+  text-align: left;
+  color: #ffffff;
+  min-width: 30%;
+
+}
+
+.message--out {
+  margin-left: auto;
+  background: #B5E2E2;
+  color: rgba(25, 25, 25, 0.95);
+  border-radius: 16px;}
+
+.message--in {
+  margin-right: auto;
+  background: #B5E2E2;
+  color: rgba(25, 25, 25, 0.95);
+  border-radius: 16px;}
+
+.position-relative{
+  position: relative;
+}
+

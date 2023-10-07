@@ -1,0 +1,120 @@
+@import "variables";
+
+html,
+body {
+  max-width: 600px;
+  margin: auto;
+  overflow-x: hidden;
+  min-height: 100vh;
+  background-color: $main;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+  Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.bg-primary {
+  background-color: $primary;
+}
+
+.bg-secondary {
+  background-color: $secondary;
+}
+
+.bg-main {
+  background-color: $main;
+}
+
+.text-primary {
+  color: $primary;
+}
+
+.text-secondary {
+  color: $secondary;
+}
+
+.text-main {
+  color: $main;
+}
+
+.text-dark {
+  color: $dark;
+}
+
+.text-white {
+  color: $white
+}
+
+.w-50 {
+  width: 50%;
+}
+
+.text-14 {
+  font-size: 14px;
+}
+
+.text-16 {
+  font-size: 16px;
+}
+
+.text-8 {
+  font-size: 8px;
+}
+.text-24{
+  font-size: 24px;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.m-auto {
+  margin: auto;
+}
+
+.d-grid {
+  display: grid;
+}
+
+.white-space-nowrap {
+  white-space: nowrap;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.p-20 {
+  padding: 20px;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+.justify-content-center {
+  justify-content: center;
+}
+
+.ml-8 {
+  margin-left: 8px;
+}
+
+.mr-8 {
+  margin-right: 8px;
+}
+
+.text-decoration-none {
+  text-decoration: none;
+}
+
+.emptyState {
+  height: calc(84vh - 60px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}

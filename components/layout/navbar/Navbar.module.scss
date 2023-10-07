@@ -1,0 +1,34 @@
+@import "styles/variables";
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.navItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  color: $gray;
+  text-decoration: none;
+  cursor: pointer;
+  padding: 0;
+  border: none;
+  background: none;
+  width: 70px;
+  line-height: 20px;
+}
+
+.navItem.active {
+  color: $dark;
+  font-weight: normal;
+  padding: 0;
+  border: none;
+  background: none;
+}
+
+.iconSize{
+  font-size: 25px;
+}
