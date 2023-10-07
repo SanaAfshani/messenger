@@ -1,4 +1,5 @@
 import { Server } from 'socket.io';
+import { addUser } from '@/lib/users'
 import { addMessage } from '@/lib/messages';
 import {NEW_CHAT_MESSAGE_EVENT,
          START_TYPING_MESSAGE_EVENT, 
@@ -16,6 +17,8 @@ function ioHandler(req: NextApiRequest, res: NextApiResponse) {
 
           const { chatId, name, picture } = socket.handshake.query;
           socket.join(chatId as string);
+
+          const user = addUser(socket.id, chatId as string, name as string, picture as string);
 
           socket.on(NEW_CHAT_MESSAGE_EVENT, (data) => {
             const message = addMessage(chatId as string, data);
