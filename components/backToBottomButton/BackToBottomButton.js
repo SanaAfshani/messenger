@@ -1,10 +1,10 @@
 import React  from 'react'
 import styles from './backToBottomButton.module.scss'
 
-const BackToBottomButton = ({onclick}) => {
+const BackToBottomButton = ({onClick}) => {
 
   return (
-    <div className={styles.buttonContainer} onClick={onclick}>
+    <div className={styles.buttonContainer} onClick={onClick}>
       <svg
         width={32}
         height={32}

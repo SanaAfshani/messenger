@@ -10,7 +10,8 @@ const useKeepScrollPosition = (deps:DependencyList = []) => {
       previousScrollPosition.current =
         container?.scrollHeight - container?.scrollTop;
     }
-  }, [deps]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [...deps]);
 
   useLayoutEffect(() => {
     if (containerRef?.current) {
@@ -18,7 +19,8 @@ const useKeepScrollPosition = (deps:DependencyList = []) => {
       container.scrollTop =
         container?.scrollHeight - previousScrollPosition.current;
     }
-  }, [deps]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [...deps]);
 
   return {
     containerRef

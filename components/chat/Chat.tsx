@@ -28,7 +28,7 @@ const ChatComponent: React.FC<ChatComponentProps> = ({ allMessages, typingUsers,
 
     const handleBackToBottomClick = () => {
         setShowBackToBottom(false);
-        const container = containerRef.current!;
+        const container = containerRef.current;
 
         if (container) {
             container.scrollTo({
